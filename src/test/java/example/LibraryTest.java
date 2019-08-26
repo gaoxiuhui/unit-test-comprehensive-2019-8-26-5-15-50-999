@@ -16,10 +16,12 @@ class LibraryTest {
 
     @BeforeAll
     static void initTestEnv() {
+    	
     }
 
     @BeforeEach
     void initEveryMethod() {
+    	
     }
 
     @Test
