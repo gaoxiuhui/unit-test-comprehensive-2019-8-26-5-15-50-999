@@ -1,6 +1,7 @@
 package tw;
 
 import tw.commands.GuessInputCommand;
+import tw.commands.IsValid;
 import tw.commands.StringToArray;
 
 /**
@@ -16,6 +17,11 @@ public class Main {
             System.out.println(input);
             // step1 字符串转换为数组
             int[] inputArray=new StringToArray().stringtoArray(input);
+            boolean valid=new IsValid().isValid(inputArray);
+            if(!valid) System.out.println("输入错误，再次输入");
+            if(valid) {
+            	
+            }
         }
     }
 }

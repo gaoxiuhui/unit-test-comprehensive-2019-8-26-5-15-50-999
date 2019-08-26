@@ -8,7 +8,6 @@ public class StringToArray {
 	   int[] intArray=new int[len];
 	   for(int i=0;i<len;i++) {
 		   intArray[i]=Integer.parseInt(stringArray[i]);
-		   System.out.println(intArray[i]);
 	   }
 	   return  intArray;	   
    }
