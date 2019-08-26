@@ -1,6 +1,7 @@
 package tw;
 
 import tw.commands.BeforeANumber;
+import tw.commands.BeforeBNumber;
 import tw.commands.GuessInputCommand;
 import tw.commands.IsValid;
 import tw.commands.StringToArray;
@@ -22,7 +23,7 @@ public class Main {
             if(!valid) System.out.println("输入错误，再次输入");
             if(valid) {
             	int Anumber=new BeforeANumber().countBeforeANumber(inputArray,CORR_ARRAY);
-            	
+            	int Bnumber=new BeforeBNumber().countBeforeBnumber(inputArray,CORR_ARRAY);
             }
         }
     }
