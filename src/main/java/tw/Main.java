@@ -1,5 +1,6 @@
 package tw;
 
+import tw.commands.BeforeANumber;
 import tw.commands.GuessInputCommand;
 import tw.commands.IsValid;
 import tw.commands.StringToArray;
@@ -10,7 +11,7 @@ import tw.commands.StringToArray;
 public class Main {
 
     private static final int RUN_TIMES = 6;
-    private static final String CORR_NUMBER = "4 2 1 6";
+    private static final int[] CORR_ARRAY = {1,2,3,4};
     public static void main(String[] args) throws Exception {
         for (int i = 0; i < RUN_TIMES; i++) {
             String input = new GuessInputCommand().input();
@@ -20,6 +21,7 @@ public class Main {
             boolean valid=new IsValid().isValid(inputArray);
             if(!valid) System.out.println("输入错误，再次输入");
             if(valid) {
+            	int Anumber=new BeforeANumber().countBeforeANumber(inputArray,CORR_ARRAY);
             	
             }
         }

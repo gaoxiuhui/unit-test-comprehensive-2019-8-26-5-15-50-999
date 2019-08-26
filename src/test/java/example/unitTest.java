@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
+import tw.commands.BeforeANumber;
 import tw.commands.IsValid;
 import tw.commands.StringToArray;
 
@@ -79,6 +80,17 @@ public class unitTest {
 	   boolean result=new IsValid().isValid(intArray);	     	   
 	     //then	 	
 	   Assertions.assertEquals(true, result);
+  }  
+  
+  @Test
+  void should_return_2_when_put_two_intArray_equal_location_and_equal_number() {
+	    //given	 
+      int[] intArray1= {1,2,3,4};	
+      int[] intArray2= {5,2,3,7};
+	    //when    
+	  int result=new BeforeANumber().countBeforeANumber(intArray1, intArray2);    	   
+	     //then	 	
+	   Assertions.assertEquals(2, result);
   }  
   
   
